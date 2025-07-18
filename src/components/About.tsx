@@ -27,7 +27,7 @@ export default function About() {
           <p className="text-gray-300 text-lg mb-4">
             Hello! I&apos;m Mahesh Udas — a passionate full-stack web developer who
             enjoys building scalable web applications and beautiful user
-            experiences. I'm skilled in the MERN stack, Tailwind CSS and exploring new technologies frequently.
+            experiences. I&apos;m skilled in the MERN stack, Tailwind CSS and exploring new technologies frequently.
           </p>
 
           <p className="text-gray-400">

@@ -44,6 +44,7 @@ export default function Hero() {
             <Image
               priority
               fill
+              quality={80}
               src={heroPhoto}
               alt="Mahesh Udas"
               className="m-auto relative! size-75 md:size-auto md:h-auto object-cover object-top md:object-cover "

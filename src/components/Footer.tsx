@@ -1,5 +1,5 @@
 // import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
-import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 
@@ -69,6 +69,14 @@ export default function Footer() {
               className="hover:text-blue-400 transition"
             >
               <FaFacebook />
+            </a>
+            <a
+              href="https://www.instagram.com/mahesh.0420/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-400 transition"
+            >
+              <FaInstagram />
             </a>
           </div>
         </div>
