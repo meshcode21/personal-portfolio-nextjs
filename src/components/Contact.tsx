@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-[#00060e] text-white border-t border-gray-800"
+      className="scroll-mt-7 py-20 bg-[#00060e] text-white border-t border-gray-800"
     >
       <div className="container mx-auto px-4 max-w-2xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">

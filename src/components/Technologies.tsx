@@ -66,7 +66,7 @@ export default function Technologies() {
           Technologies I Work With
         </h2>
 
-        <div className="flex flex-wrap gap-5 px-4 justify-center">
+        <div className="flex flex-wrap md:gap-7 gap-5  px-4 justify-center">
           {/* <Slider
             width="160px"
             duration={20}

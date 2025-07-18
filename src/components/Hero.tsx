@@ -1,9 +1,10 @@
 import heroPhoto from "../assets/mahesh.jpg";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative text-white min-h-[calc(100vh-80px)] flex items-center w-full overflow-x-clip">
-      <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-6 overflow-clip">
+    <section id="home" className="scroll-mt-20 relative text-white min-h-[calc(100vh-80px)] flex items-center w-full overflow-x-clip">
+      <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-6 overflow-x-clip">
         {/* Text Content */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
@@ -39,11 +40,13 @@ export default function Hero() {
 
         {/* Image */}
         <div className="flex-1 relative">
-          <div className="relative z-10 w-[300px] md:w-[400px] mx-auto">
-            <img
-              src={heroPhoto.src}
+          <div className="relative z-10 w-[350px] aspect-square md:aspect-auto md:w-[400px] mx-auto rounded-full p-1 md:p-0 md:rounded-3xl overflow-clip border md:border-2 border-gray-700 shadow-2xl">
+            <Image
+              priority
+              fill
+              src={heroPhoto}
               alt="Mahesh Udas"
-              className="m-auto rounded-full p-1 md:p-0 md:rounded-3xl size-75 md:size-auto md:h-auto object-cover object-top md:object-cover shadow-2xl border md:border-2 border-gray-700"
+              className="m-auto relative! size-75 md:size-auto md:h-auto object-cover object-top md:object-cover "
             />
           </div>
 
@@ -57,8 +60,7 @@ export default function Hero() {
         <div className="-z-10 absolute -bottom-10 -right-20 w-[450px] h-[450px] border border-gray-500/50 rounded-[50%]" />
         {/* circle */}
         <div className="-z-10 hidden md:block absolute bottom-0 right-[13%] translate-x-1/4  w-[500px] h-[500px] rounded-full bg-blue-600/70 blur-[100px]"></div>
-
       </div>
-    </section>
+    </section >
   );
 }
