@@ -7,7 +7,18 @@ export default function Projects() {
       github: "https://github.com/meshcode21/MESH-Automation-2.0-frontend",
       demo:
         "https://www.linkedin.com/posts/mahesh-udas-a691b32b3_webscraping-reactjs-nodejs-activity-7309213653956726784-YNh-",
+        demo_text: "Demo Video",
       tech: ["React", "Node.js", "Tailwind CSS"],
+    },
+    {
+      name: "Personalized Todo",
+      description:
+        "A personalized todo project having personal authentication system and you can add your todos by the login into the system using you account.",
+      github: "https://github.com/meshcode21/Todo",
+      demo:
+        "https://todo-nine-lemon.vercel.app/",
+        demo_text: "Live Web App",
+      tech: ["React","React Query","Redux Toolkit", "Node.js", "Tailwind CSS"],
     },
   ];
 
@@ -58,7 +69,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm transition"
                 >
-                  Demo Video
+                  {project.demo_text}
                 </a>
               </div>
             </div>
