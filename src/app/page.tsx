@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Projects from '@/components/Projects'
 import Technologies from '@/components/Technologies'
+import FunProjects from '@/components/FunProjects'
 import React from 'react'
 
 export default function page() {
@@ -15,6 +16,7 @@ export default function page() {
       <Technologies />
       <About />
       <Projects />
+      <FunProjects/>
       <Contact />
       <Footer />
     </>
