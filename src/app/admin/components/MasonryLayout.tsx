@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Masonry from 'react-masonry-css';
 
@@ -63,7 +63,7 @@ export default function MasonryLayout() {
             <div className="italic">{contact.date}</div>
           </div>
           <div className="text-justify leading-6 mb-2 indent-8 italic">
-            "{contact.message}"
+            &quot;{contact.message}&quot;
           </div>
           <div className="flex items-center justify-between">
             <div className="flex">
