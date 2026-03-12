@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+### Contact & Admin Panel
+
+A simple contact form was added along with an admin page that stores messages in a JSON file. Visitors who send a message via the contact section are persisted to `data/messages.json`, and you can review them by visiting `/admin`.
+
+- `src/components/Contact.tsx` – user-visible form that POSTS to `/api/contact`.
+- `src/app/api/contact/route.ts` – API handler supporting GET (list) and POST (save).
+- `data/messages.json` – flat array of message objects; easy to edit or migrate later.
+- `/admin` – client dashboard displaying incoming messages in a masonry layout.
+
+Feel free to replace the JSON storage with a database or add authentication later.
+
 ## Getting Started
 
 First, run the development server:
