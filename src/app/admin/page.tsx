@@ -5,7 +5,7 @@ import MasonryLayout from "./components/MasonryLayout"
 import Navbar from "./components/navbar"
 // import Sidenav from "./components/sidenav"
 
-const page = () => {
+const Page = () => {
     const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
     useEffect(() => {
         const loggedInStatus = localStorage.getItem("isLoggedIn");
@@ -70,4 +70,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

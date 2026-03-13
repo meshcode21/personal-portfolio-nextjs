@@ -17,8 +17,8 @@ export async function GET() {
     const content = await fs.readFile(filePath, 'utf-8');
     const messages = JSON.parse(content);
     return NextResponse.json(messages);
-  } catch (err) {
-    console.error('Failed to read messages.json', err);
+  } catch {
+    console.error('Failed to read messages.json');
     return NextResponse.json([], { status: 500 });
   }
 }
@@ -36,12 +36,12 @@ export async function POST(req: NextRequest) {
     }
 
     const filePath = getMessagesFilePath();
-    let messages: any[] = [];
+    let messages: { name: string; email: string; message: string; date: string }[] = [];
 
     try {
       const content = await fs.readFile(filePath, 'utf-8');
       messages = JSON.parse(content);
-    } catch (err) {
+    } catch {
       // If file doesn't exist or is invalid, start fresh
       messages = [];
     }
@@ -57,8 +57,8 @@ export async function POST(req: NextRequest) {
     await fs.writeFile(filePath, JSON.stringify(messages, null, 2), 'utf-8');
 
     return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error('POST /api/contact error', err);
+  } catch {
+    console.error('POST /api/contact error');
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
