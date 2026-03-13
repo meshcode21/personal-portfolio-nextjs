@@ -8,7 +8,7 @@ import { join } from 'path';
 function getMessagesFilePath() {
   // Root of the project
   const dataDir = process.cwd();
-  return join(dataDir, 'data', 'messages.json');
+  return join(dataDir, 'messages.json');
 }
 
 export async function GET() {
@@ -55,7 +55,8 @@ export async function POST(req: NextRequest) {
 
     messages.push(newMessage);
     await fs.writeFile(filePath, JSON.stringify(messages, null, 2), 'utf-8');
-
+    console.log("DAta stored");
+    
     return NextResponse.json({ success: true });
   } catch {
     console.error('POST /api/contact error');
